@@ -1342,6 +1342,12 @@ SM2_R_USER_ID_TOO_LARGE:106:user id too large
 SSL_R_APPLICATION_DATA_AFTER_CLOSE_NOTIFY:291:\
 	application data after close notify
 SSL_R_APP_DATA_IN_HANDSHAKE:100:app data in handshake
+SSL_R_ATTEMPTED_TLS_CONNECTION_TO_NON_TLS_SERVER_LESS_THAN_5_BYTES:1953:\
+	attempted tls connection to non tls server which replied with less than 5 bytes
+SSL_R_ATTEMPTED_TLS_CONNECTION_TO_A_PLAINTEXT_HTTP_SERVER:1952:\
+	attempted tls connection to a plaintext http server
+SSL_R_ATTEMPTED_TLS_CONNECTION_TO_NON_TLS_SERVER:1951:\
+	attempted tls connection to non tls server
 SSL_R_ATTEMPT_TO_REUSE_SESSION_IN_DIFFERENT_CONTEXT:272:\
 	attempt to reuse session in different context
 SSL_R_AT_LEAST_TLS_1_2_NEEDED_IN_SUITEB_MODE:158:\

@@ -688,16 +688,20 @@ int ssl3_read_bytes(SSL *ssl, uint8_t type, uint8_t *recvd_type,
         do {
             rr = &s->rlayer.tlsrecs[s->rlayer.num_recs];
 
+            //printf("!!!!!!! here1\n");
             ret = HANDLE_RLAYER_READ_RETURN(s,
                     s->rlayer.rrlmethod->read_record(s->rlayer.rrl,
                                                      &rr->rechandle,
                                                      &rr->version, &rr->type,
                                                      &rr->data, &rr->length,
                                                      NULL, NULL));
+            //printf("!!!!!!! here2\n");
             if (ret <= 0) {
+              //printf("!!!!!!! here3\n");
                 /* SSLfatal() already called if appropriate */
                 return ret;
             }
+            //printf("!!!!!!! here4\n");
             rr->off = 0;
             s->rlayer.num_recs++;
         } while (s->rlayer.rrlmethod->processed_read_pending(s->rlayer.rrl)
